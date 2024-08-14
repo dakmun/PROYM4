@@ -1,0 +1,549 @@
+body {
+   
+    font-family: sans-serif;
+    background-color: #0c0c10;
+    margin: 0;
+}
+
+select:focus, input:focus {
+    background-color: #0b0d0e;
+    color: whitesmoke;
+    border: 2px solid #0b6bcb;
+}
+
+select:focus-visible, input:focus-visible {
+    background-color: #0b0d0e;
+    color: whitesmoke;
+    border: 2px solid #0b6bcb;
+    outline: none;
+}
+
+label {
+    color: #17c6c6;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: system-ui;
+}
+
+select, input {
+    padding: 4px 0px 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #272c31;
+    font-family: system-ui;
+    background-color: #0b0d0e;
+    color: #edebe3;
+    font-size: 14px;
+    font-weight: 200;
+    color-scheme: dark;
+}
+
+.input-dinamico {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+button {
+    background-color: #001eff;
+    color: azure;
+    border-style: none;
+    border-radius: 4px;
+    padding: 8px;
+    width: -webkit-fill-available;
+}
+
+button:hover {
+    background-color: #001eb8;
+    color: whitesmoke;
+}
+
+.eliminarBtn:hover {
+    background-color: #d15000;
+}
+
+.editarBtn:hover {
+    background-color: #0028c6;
+}
+
+
+input[type="submit"] {
+    background-color: #1809ff;
+    color: azure;
+    border-style: none;
+    border-radius: 4px;
+    padding: 8px;
+    width: auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #002aff;
+    color: whitesmoke;
+}
+
+input[type="submit"]:active {
+    background-color: #002aff;
+    color: azure;
+}
+
+input[type="submit"]:focus {
+    background-color: #002aff;
+    color: whitesmoke;
+}
+
+.formulario {
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 75vw;
+    padding: 14px 21px 21px 21px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    justify-content: space-evenly;
+    max-width: 900px;
+    background-color: #0b0d0e;
+    color: whitesmoke;
+    border: 1px solid #32383e;
+}
+
+.wrapper-opciones {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-flow: wrap;
+    width: 100%;    
+}
+
+.wrapper {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-opciones {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    gap: 0px;
+}
+
+.reservaDiv p strong {
+    color: #BDBDBD;
+}
+
+.reservaDiv p {
+    color: #FB8C00;
+    margin: 7px 0px 7px 0px;
+}
+
+.container-buscar {
+    padding: 24px;
+    background-color: #0b0d0e;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 12px;
+    border: 1px solid #32383e;
+ 
+}
+    
+.container-formulario {
+        background-color: #0f1214;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 18px;
+        align-items: stretch;
+        color: whitesmoke;
+        min-width: min-content;
+        padding: 16px 22px 22px 22px;
+        gap: 8px;
+        margin: 12px;
+        height: 50%;
+        justify-content: flex-start;
+        border: 1px solid #1b1f23;
+        width: 66vw;
+        min-width: 250px;
+    }
+
+.buscar-datos {
+    background-color: #0f1214;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 18px;
+    align-items: stretch;
+    color: whitesmoke;
+    padding: 12px 24px 12px 24px;
+    gap: 8px;
+    margin: 12px;
+    height: -webkit-fill-available;
+    justify-content: flex-start;
+    border: 1px solid #1b1f23;
+    max-height: 90vh;
+    width: -webkit-fill-available;
+    max-width: 66vw;
+    min-width: 250px;
+  }
+
+.datosForm p strong {
+    color: #17c6c6;
+ }
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000075;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.editModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #080d0f45;
+    z-index: 1000;
+    display: flex;
+    flex-flow: column;
+    color: black;
+    overflow: hidden;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.containerModal {
+    color: antiquewhite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 8px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid white;
+    line-height: 1;
+    font-size: 15px;
+    font-family: system-ui;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #00000075;
+    backdrop-filter: blur(2px);
+}
+
+.datosForm {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.modal-h1 {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 12px;
+}
+
+.modal {
+    color: antiquewhite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #151515;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 8px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #1953ba;
+    font-size: 14px;
+    font-family: system-ui;
+    width: 50vw;
+    max-width: 350px;
+}
+
+.editarForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 24px;
+    width: 30vw;
+    border: 1px solid turquoise;
+    border-radius: 12px;
+    background-color: #0b0d0e;
+}   
+
+.lista-container {
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: floralwhite;
+    text-align: start;
+    scrollbar-width: thin;
+    scrollbar-color: #1fe9a0 #000;
+    width: -webkit-fill-available;
+    padding: 0px 14px 0px 0px;
+    scrollbar-color: #d3ff47 #110b2f;
+    scrollbar-gutter: auto;
+    margin: 0 -24px 0px 0px;
+}
+
+/* Chrome, Safari y Edge */
+.lista-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.lista-container::-webkit-scrollbar-track {
+    background: #444;
+}
+
+.lista-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 3px solid #444;
+}
+
+main { 
+      max-height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 1.5vw;
+      margin: 0px 1.5vw;
+  }  
+
+.listasDatos {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container {
+
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+}
+
+.buttonsDiv {
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.resultadosBusqueda {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 12px;
+    color: whitesmoke;
+    padding: 0px 0px 0px 0px;
+}
+
+.resultadosContainer {
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: floralwhite;
+    text-align: start;
+    scrollbar-width: thin;
+    scrollbar-color: #1fe9a0 #000;
+    width: -webkit-fill-available;
+    padding: 0px 24px 0px 0px;
+    scrollbar-color: #d3ff47 #110b2f;
+    scrollbar-gutter: auto;
+    margin: 0px -24px 0px 0px;
+}
+
+/* Chrome, Safari y Edge */
+.resultadosContainer::-webkit-scrollbar {
+width: 12px;
+}
+
+.resultadosContainer::-webkit-scrollbar-track {
+background: #444;
+}
+
+.resultadosContainer::-webkit-scrollbar-thumb {
+background-color: #888;
+border-radius: 6px;
+border: 3px solid #444;
+}
+
+.wrapperRes {
+    padding: 4px 12px 4px 16px;
+    border-radius: 12px;
+    background-color: #0b0d0e;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    border: 1px solid #1b242d;
+    gap: 8px;
+}
+
+.wrapperRes div p {
+    color: #ffaf68;
+    font-weight: normal;
+}
+
+.wrapperRes div p strong {
+    color: #57d2ab;
+    font-weight: 100;
+}
+
+.reservaDiv {
+    padding: 8px 8px 8px 8px;
+    border-radius: 8px;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    line-height: 0;    
+}
+
+.groupBtn {
+    gap: 12px;
+    background-color: #0b0d0e;
+    font-family: monospace;
+    display: flex;
+    flex-direction: row;
+    line-height: 0;
+    padding-bottom: 8px;
+}
+
+.editarBtn {
+    background-color: #0d1e62;
+    color: azure;
+    border-style: none;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.eliminarBtn {
+    background-color: #572a0e;
+    color: azure;
+    border-style: none;
+    border-radius: 4px;
+    padding: 0px;
+}
+
+.groupBtn button {
+    width: 50%;
+}
+
+.listaReservas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 12px 12px 0px;
+    border-radius: 12px;
+    color: whitesmoke;
+}
+
+.datos-h1 h1 {
+    margin: 0;
+}
+
+.editModal h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 21px;
+    margin: 0;
+}
+
+.datos {
+    background-color: #0f1214;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 18px;
+    align-items: stretch;
+    color: whitesmoke;
+    padding: 12px 24px 12px 24px;
+    gap: 8px;
+    margin: 12px;
+    height: -webkit-fill-available;
+    justify-content: flex-start;
+    border: 1px solid #1b1f23;
+    max-height: 90vh;
+    width: -webkit-fill-available;
+    max-width: 66vw;
+    min-width: 250px;
+}
+
+.datos-h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 12px;
+    padding: 12px;
+}
+
+.container-datos {  
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    border-radius: 12px;
+    align-items: center;
+    color: whitesmoke;
+    max-height: 100vh;
+    background-color: #0f1214;
+}
+
+@media screen and (900px > width >= 500px) {
+
+    .container-formulario {
+        width: 40vw;
+        min-width: 280px;
+    }
+
+    .buscar-datos {
+        max-width: unset;
+        width: 40vw;
+        min-width: 280px;
+    }
+
+    .datos {
+        width: 40vw;
+        min-width: 280px;
+    }
+}
+
+@media  screen and (width >= 900px) {
+
+    .container-formulario { 
+        width: 23vw;
+    }
+
+    .buscar-datos {
+        max-width: unset;
+        width: 23vw;
+    }
+
+    .datos {
+        width: 23vw;
+    }
+}

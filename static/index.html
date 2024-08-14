@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROYM4 - Reservas de Hotel</title>
+  <link rel="stylesheet" href="https://csstools.github.io/normalize.css/12.1.1/normalize.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section class="container-formulario">
+            <div class="datos-h1">  
+              <h1>Crear Reserva</h1>
+            </div>
+            <form class="formulario" id="reservacionForm">
+                <div class="wrapper">
+                  <div class="wrapper-opciones">
+                        <div class="container-opciones">
+                          <label for="hotel">Hotel:</label>      
+                          <select name="hotel" id="hotel" required>
+                            <option value="Hotel Primavera">Hotel Primavera</option>
+                            <option value="Hotel Verano">Hotel Verano</option>
+                            <option value="Hotel Invierno">Hotel Invierno</option>
+                            <option value="Hotel Otono">Hotel Otoño</option>
+                          </select>
+                        </div> 
+                      
+                        <div class="container-opciones">
+                        <label for="fecha_inicio">Fecha Inicio:</label>
+                        <input class="dateInput" type="date" name="fecha_inicio" required>
+                        </div>
+
+                        <div class="container-opciones">
+                          <label for="fecha_fin">Fecha Fin:</label>
+                          <input class="dateInput" type="date" name="fecha_fin" required>
+                        </div>
+
+                        <div class="container-opciones">
+                          <label for="tipo_habitacion">Tipo de Habitacion:</label>
+                          <select name="tipo_habitacion" id="tipo_habitacion" required>
+                            <option value="Simple">Simple</option>
+                            <option value="Doble">Doble</option>
+                            <option value="Suite">Suite</option>
+                          </select>
+                        </div>
+
+                        <div class="container-opciones">      
+                          <label for="estado">Estado:</label>
+                          <select name="estado" id="estado" required>
+                            <option value="Reservado">Reservado</option>
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="Confirmado">Confirmado</option>
+                          </select>
+                        </div>
+
+                        <div class="container-opciones">
+                          <label for="num_huespedes">N° Huespedes:</label>
+                          <input type="number" name="num_huespedes" placeholder="N° Huespedes" required>
+                        </div>
+                  </div>
+                        <button id="crearBtn" type="submit">Enviar</button>
+                </div> 
+            </form>
+        </section>
+
+        <section class="buscar-datos">
+            <div class="datos-h1">  
+              <h1>Buscar Reserva</h1>
+            </div>
+            <form id="buscarForm" class="container-buscar">           
+                  <select id="menu-principal">
+                      <option value="">Seleccione una opción</option>
+                      <option value="id">ID</option>
+                      <option value="hotel">Hotel</option>
+                      <option value="rango_fecha">Rango de Fechas</option>
+                      <option value="tipo_habitacion">Tipo de Habitación</option>
+                      <option value="estado">Estado</option>
+                      <option value="num_huespedes">Número de Huéspedes</option>
+                  </select>
+               
+                    <div id="contenedor-rango_fecha" class="input-dinamico" style="display:none;">
+                        <div class="container-opciones">
+                          <label for="fecha_inicio">Fecha Inicio:</label>              
+                          <input type="date" id="input-fecha_inicio" placeholder="yyyy-mm-dd" name="fecha_inicio">
+                        </div>
+                        <div class="container-opciones">
+                          <label for="fecha_fin">Fecha Fin:</label>
+                          <input type="date" id="input-fecha_fin" placeholder="yyyy-mm-dd" name="fecha_fin">
+                       </div>
+                    </div>
+
+                    <select id="menu-hotel" class="input-dinamico" style="display:none;">
+                      <option value="">Seleccione un Hotel</option>
+                      <option value="Hotel Verano">Hotel Verano</option>
+                      <option value="Hotel Primavera">Hotel Primavera</option>
+                      <option value="Hotel Invierno">Hotel Invierno</option>
+                      <option value="Hotel Otono">Hotel Otoño</option>
+                    </select>
+         
+                  <select id="menu-tipo_habitacion" class="input-dinamico" style="display:none;">
+                    <option value="">Tipo de Habitacion</option>
+                    <option value="Simple">Simple</option>
+                    <option value="Doble">Doble</option>
+                    <option value="Suite">Suite</option>
+                  </select>
+
+                  <select id="menu-estado" class="input-dinamico" style="display:none;">
+                    <option value="">Estado Reserva</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Confirmado">Confirmado</option>
+                    <option value="Reservado">Reservado</option>
+                  </select>
+
+                  <div id="contenedor-num_huespedes" class="input-dinamico" style="display:none;">
+                      <div class="container-opciones">
+                        <label for="num_huespedes">Min:</label>              
+                        <input id="num_huespedes_min" type="number" placeholder="Min" name="num_huespedes">
+                      </div>
+                      <div class="container-opciones">                
+                        <label for="num_huespedes">Max:</label>
+                        <input id="num_huespedes_max" type="number" placeholder="Max" name="num_huespedes">
+                      </div>        
+                  </div>
+
+                <input type="number" id="input-id" class="input-dinamico" placeholder="ID" name="id" style="display:none;">
+
+              <button id="buscarBtn" type="submit">Buscar</button>
+            </form>
+
+            <div class="resultadosContainer">
+                <div class="resultadosBusqueda" id="resultadosBusqueda"></div>
+            </div>
+        
+        </section>
+
+        <section class="datos">
+            <div class="datos-h1">  
+              <h1>Lista de Reservas</h1>
+            </div>
+            <div class="lista-container">       
+                <div class="listaReservas"  id="listaReservas"></div>
+            </div>
+        </section>
+    </main>
+<script src="scripts.js"></script> 
+</body>
+</html>
+
+
+
