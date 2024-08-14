@@ -1,0 +1,12 @@
+# .gitignore
+node_modules/
+.env
+data.json
+index.html
+server.js
+routes/
+static/
+controller/
+package-lock.json
+package.json
+data/
