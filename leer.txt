@@ -1,0 +1,16 @@
+1.- ejecutar "npm run dev" en la terminal del vs code
+2-. ir a "http://localhost:3000" en el navegador
+3.- crear, editar, buscar o eliminar una reserva usando la interfaz
+4.- filtrar búsquedas mediante enlaces
+
+Ejemplos de Links:
+
+http://localhost:3000/reservas/1 (muestra la reserva ID numero 1)
+
+http://localhost:3000/reservas?id=1 (muestra la reserva ID numero 1)
+
+http://localhost:3000/reservas?hotel=Hotel%20Verano (muestra las reservas del hotel verano)
+
+http://localhost:3000/reservas?num_huespedes=10 (muestra las reservas que tienen mas de 10 huéspedes)
+
+http://localhost:3000/reservas?estado=confirmado (muestra las reservas que tienen estado "Confirmado")

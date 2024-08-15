@@ -206,7 +206,25 @@
       "tipo_habitacion": "Suite",
       "estado": "Confirmado",
       "num_huespedes": "5"
+    },
+    {
+      "id": 33,
+      "hotel": "Hotel Otono",
+      "fecha_inicio": "2024-08-11",
+      "fecha_fin": "2024-08-27",
+      "tipo_habitacion": "Suite",
+      "estado": "Pendiente",
+      "num_huespedes": "4"
+    },
+    {
+      "id": 34,
+      "hotel": "Hotel Otono",
+      "fecha_inicio": "2024-08-11",
+      "fecha_fin": "2024-08-27",
+      "tipo_habitacion": "Simple",
+      "estado": "Reservado",
+      "num_huespedes": "6"
     }
   ],
-  "contadorReservas": 32
+  "contadorReservas": 34
 }
